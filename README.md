@@ -1,10 +1,4 @@
-# iam
-
-### **Ejercicio IAM y S3 (4 horas de duración)**
-
-A continuación se presenta un ejercicio práctico para configurar y probar diferentes tipos de acceso a un bucket de Amazon S3 mediante **usuarios**, **grupos**, **políticas** y **roles** de IAM**, con un nivel de detalle y validaciones que requieren de aproximadamente **4 horas** de trabajo.
-
----
+### **Ejercicio IAM y S3**
 
 ## **Escenario**
 
@@ -49,7 +43,6 @@ A continuación se enumeran los pasos recomendados para llevar a cabo el ejercic
 1.3. **Subir archivos de prueba** en ambas carpetas.  
 1.4. **Habilitar el cifrado en reposo** (SSE-S3 o SSE-KMS) en el bucket a nivel de configuración de S3.  
 
-> **Tiempo estimado**: 15-20 minutos
 
 ---
 
@@ -58,7 +51,6 @@ A continuación se enumeran los pasos recomendados para llevar a cabo el ejercic
 2.1. En la consola de S3, revisa la sección **Block Public Access** y asegúrate de que **todas las opciones** de bloqueo de acceso público estén habilitadas.  
 2.2. Verifica o edita la **Bucket Policy** (si existe) para cerciorarte de que no se permita acceso público ni permisos anónimos. (Si el bucket es nuevo y no requiere políticas adicionales, puedes omitir este paso.)  
 
-> **Tiempo estimado**: 10 minutos
 
 ---
 
@@ -94,7 +86,6 @@ Un ejemplo de la sección principal de la política podría ser:
 }
 ```
 
-> **Tiempo estimado**: 15-20 minutos
 
 ---
 
@@ -105,7 +96,6 @@ Un ejemplo de la sección principal de la política podría ser:
 4.3. Crea uno o dos usuarios, por ejemplo `usuario1` y `usuario2`.  
 4.4. **Asigna** a ambos usuarios al `GrupoLectoresS3`.  
 
-> **Tiempo estimado**: 15 minutos
 
 ---
 
@@ -117,7 +107,6 @@ Un ejemplo de la sección principal de la política podría ser:
    - Que `admin-s3` pueda listar y leer `/public/` y `/private/`.  
    - Que `admin-s3` pueda **subir** y **borrar** objetos en ambas carpetas.  
 
-> **Tiempo estimado**: 20-30 minutos
 
 ---
 
@@ -129,7 +118,6 @@ Un ejemplo de la sección principal de la política podría ser:
 6.3. Asigna una política de solo lectura para todo el bucket. Puedes duplicar la política de “lectura” para `/public/` y ampliarla para `arn:aws:s3:::bucket-lab-iam/*`, o usar la política administrada `AmazonS3ReadOnlyAccess` de AWS (si quieres restringirlo solo a este bucket, crea una política personalizada).  
 6.4. Configura tu instancia EC2 (nueva o existente) para que asuma el rol `EC2S3ReadOnlyRole` (en la sección **IAM Role** de la configuración de la instancia).  
 
-> **Tiempo estimado**: 20 minutos
 
 ---
 
@@ -139,7 +127,6 @@ Un ejemplo de la sección principal de la política podría ser:
 7.2. Asocia un bucket de destino para los logs de CloudTrail (puede ser otro bucket diferente al de este ejercicio).  
 7.3. Verifica que comience a registrar eventos de creación de usuarios, asociación de políticas, etc.  
 
-> **Tiempo estimado**: 20-30 minutos
 
 ---
 
@@ -170,7 +157,6 @@ Un ejemplo de la sección principal de la política podría ser:
 4. (Opcional) **Revisar CloudTrail**:  
    - Confirma que los eventos IAM y S3 estén siendo registrados.  
 
-> **Tiempo estimado**: 30-45 minutos
 
 ---
 

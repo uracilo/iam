@@ -2,7 +2,7 @@
 
 ## **Escenario**
 
-La empresa ABC ha creado un bucket de S3 llamado `bucket-lab-iam`. Este bucket cuenta con dos carpetas principales:
+La empresa ABC ha creado un bucket de S3 llamado `bucket-lab-iam-xidera-NOBRE`. Este bucket cuenta con dos carpetas principales:
 
 1. **`/public/`**: contendrá archivos a los que ciertos usuarios podrán acceder con permisos de solo lectura.  
 2. **`/private/`**: contendrá información interna. Únicamente un usuario administrador y un rol de respaldo tendrán acceso de lectura/escritura.  
@@ -175,17 +175,3 @@ Para dar por concluido el ejercicio, se solicita un pequeño **reporte** que inc
 4. (Opcional) **Extracto de CloudTrail** donde se reflejen las operaciones realizadas.  
 
 ---
-
-## **Tiempo Total Aproximado (4 horas)**
-
-A modo de resumen:
-
-- **Creación y configuración del bucket** (con cifrado, carpetas y bloqueo de acceso público): ~30-40 minutos  
-- **Políticas y grupos de IAM** (lectura, administrador): ~30-45 minutos  
-- **Creación de rol para EC2** y configuración en la instancia: ~20-30 minutos  
-- **Habilitar CloudTrail** y revisar logs (opcional): ~20-30 minutos  
-- **Validaciones, pruebas y reporte**: ~60-90 minutos  
-
-Siguiendo estos pasos de forma ordenada y dedicando tiempo a revisar los permisos y hacer pruebas, completarás el laboratorio en alrededor de **4 horas**.
-
-¡Con ello habrás practicado la creación y asignación de **usuarios**, **grupos**, **políticas** y **roles** en IAM para controlar accesos a S3 de forma granular y segura, incluyendo aspectos de **cifrado**, **bloqueo de acceso público**, y **auditoría con CloudTrail**!

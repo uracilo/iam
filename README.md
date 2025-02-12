@@ -2,7 +2,7 @@
 
 ## **Escenario**
 
-La empresa ABC ha creado un bucket de S3 llamado `bucket-lab-iam-xidera-NOBRE`. Este bucket cuenta con dos carpetas principales:
+La empresa ABC ha creado un bucket de S3 llamado `bucket-lab-iam-xidera-NOMBRE`. Este bucket cuenta con dos carpetas principales:
 
 1. **`/public/`**: contendrá archivos a los que ciertos usuarios podrán acceder con permisos de solo lectura.  
 2. **`/private/`**: contendrá información interna. Únicamente un usuario administrador y un rol de respaldo tendrán acceso de lectura/escritura.  

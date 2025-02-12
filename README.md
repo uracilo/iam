@@ -34,7 +34,7 @@ Se requiere además que una aplicación que corre en **Amazon EC2** pueda **leer
 
 ## **Pasos a Seguir**
 
-A continuación se enumeran los pasos recomendados para llevar a cabo el ejercicio. Se incluye una estimación de tiempo que, sumada, te dará el total aproximado de **4 horas**.
+A continuación se enumeran los pasos recomendados para llevar a cabo el ejercicio.
 
 ### 1. Crear o verificar el bucket y la estructura de carpetas
 
@@ -46,7 +46,7 @@ A continuación se enumeran los pasos recomendados para llevar a cabo el ejercic
 
 ---
 
-### 2. Bloquear el acceso público y configurar Bucket Policy (opcional)
+### 2. Bloquear el acceso público y configurar Bucket Policy
 
 2.1. En la consola de S3, revisa la sección **Block Public Access** y asegúrate de que **todas las opciones** de bloqueo de acceso público estén habilitadas.  
 2.2. Verifica o edita la **Bucket Policy** (si existe) para cerciorarte de que no se permita acceso público ni permisos anónimos. (Si el bucket es nuevo y no requiere políticas adicionales, puedes omitir este paso.)  
